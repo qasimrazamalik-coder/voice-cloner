@@ -19,7 +19,7 @@ classifiers = [
     "Natural Language :: English",
 ]
 dependencies = [
-    "omnivoice[lora]", "peft", "gradio>=5.20,<6", "librosa", "soundfile", "noisereduce",
+    "omnivoice[lora]", "peft", "gradio>=5.20,<7", "librosa", "soundfile", "noisereduce",
     "pyloudnorm", "faster-whisper", "transformers", "num2words", "pandas",
 ]
 

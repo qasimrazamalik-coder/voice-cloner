@@ -2,7 +2,7 @@
 omnivoice[lora]
 peft
 # Web app
-gradio>=5.20,<6
+gradio>=5.20,<7
 # Audio
 librosa
 soundfile

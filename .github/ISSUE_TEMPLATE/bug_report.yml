@@ -1,0 +1,33 @@
+name: Bug report
+description: Something errors, sounds wrong, or the Urdu text is wrong
+labels: [bug]
+body:
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where did you run it?
+      options: [Google Colab (free T4), Google Colab (paid GPU), Local GPU, Other]
+    validations: { required: true }
+  - type: dropdown
+    id: tab
+    attributes:
+      label: Which part?
+      options: [Studio, Batch, Live, Train, Self-test, Command line, Install]
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations: { required: true }
+  - type: textarea
+    id: log
+    attributes:
+      label: Error message or log
+      render: text
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Responsible use
+      options:
+        - label: I only use voices I own or have permission to clone
+          required: true

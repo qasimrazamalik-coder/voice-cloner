@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+# local runtime data — never commit voices or recordings
+VoiceCloner/
+_work/
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.zip
+*.srt
+!examples/*.txt
+.DS_Store

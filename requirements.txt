@@ -1,0 +1,16 @@
+# Core model + LoRA fine-tuning
+omnivoice[lora]
+peft
+# Web app
+gradio>=5.20,<6
+# Audio
+librosa
+soundfile
+noisereduce
+pyloudnorm
+# Accuracy judges (speech recognition + speaker verification)
+faster-whisper
+transformers
+# Text + data
+num2words
+pandas

@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voice-cloner"
+dynamic = ["version"]
+description = "Free, open-source Urdu + English voice cloning: studio, real-time streaming, speech-to-speech and LoRA fine-tuning on OmniVoice."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Qasim Raza Malik", email = "iamqasimrazamalik@gmail.com" }]
+requires-python = ">=3.10"
+keywords = ["voice-cloning", "tts", "urdu", "text-to-speech", "omnivoice", "lora", "gradio", "speech"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Natural Language :: Urdu",
+    "Natural Language :: English",
+]
+dependencies = [
+    "omnivoice[lora]", "peft", "gradio>=5.20,<6", "librosa", "soundfile", "noisereduce",
+    "pyloudnorm", "faster-whisper", "transformers", "num2words", "pandas",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "numpy", "pandas"]
+
+[project.scripts]
+voice-cloner = "voice_cloner.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/qasimrazamalik-coder/voice-cloner"
+Issues = "https://github.com/qasimrazamalik-coder/voice-cloner/issues"
+
+[tool.setuptools]
+packages = ["voice_cloner"]
+
+[tool.setuptools.dynamic]
+version = { attr = "voice_cloner.__version__" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
